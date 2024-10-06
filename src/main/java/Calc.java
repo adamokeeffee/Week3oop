@@ -13,7 +13,7 @@ public class Calc {
         double num2 = scan1.nextDouble();
         System.out.println("You entered: " + num2);
 
-        System.out.println("Choose an operation (add, subtract, multiply, divide): ");
+        System.out.println("Choose an operation (add, subtract, multiply, divide, exponential): ");
         String operation = scan1.next();
 
         // If user inputs 0 and divide, an error pops up and the program ends
@@ -31,6 +31,8 @@ public class Calc {
             case "multiply" -> multiply(num1, num2);
 
             case "divide" -> divide(num1, num2);
+
+            case "exponential" -> exponential(num1,num2);
 
             default -> {
                 System.out.println("Invalid operation");
@@ -59,5 +61,9 @@ public class Calc {
 
     public static double divide(double num1, double num2) {
         return num1 / num2;
+    }
+
+    public static double exponential(double base, double exponent) {
+        return Math.pow(base, exponent);
     }
 }
