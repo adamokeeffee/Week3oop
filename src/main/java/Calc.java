@@ -37,6 +37,10 @@ public class Calc {
                 subtract(num1,num2);
             }
 
+            case "multiply" -> {
+                multiply(num1,num2);
+            }
+
             default -> {
                 System.out.println("Invalid operation");
                 yield 0;
@@ -52,6 +56,11 @@ public class Calc {
         public static void subtract(double num1, double num2){
         double SUB = num1 - num2;
         System.out.println("The total is "+ SUB);
+        }
+
+        public static void multiply(double num1, double num2){
+        double MUL = num1 * num2;
+        System.out.println("The total is "+ MUL);
         }
 
 }
